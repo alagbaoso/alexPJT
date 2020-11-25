@@ -1,0 +1,6 @@
+---
+- name: Printing out OS family
+  hosts: all
+  tasks:
+    - debug: var=ansible_os_family
+...
