@@ -1,0 +1,14 @@
+---
+- name: Remove user via loop
+  hosts: all
+  tasks: 
+    - name: Remove user and their home-directory
+      user:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+      loop:
+        - sal
+        - bal
+        - kal
+...
